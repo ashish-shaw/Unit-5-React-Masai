@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  const user1 = {
+    name: "Opearting System",
+    mob1: ["Android", "Blackberry", "Iphone", "Windows Phone"],
+  };
+  const user2 = {
+    name: "Manufacturers",
+    mob2: ["Samsung", "HTC", "Micromax", "Apple"],
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Mobile {user1.name}</h1>
+      {user1.mob1.map((e) => {
+        return Userdata(e);
+      })}
+
+      <h1>Mobile {user2.name}</h1>
+      {user2.mob2.map((e) => {
+        return Userdata(e);
+      })}
+    </div>
+  );
+}
+
+function Userdata(e) {
+  return (
+    <div>
+      <ul>
+        <li>{e}</li>
+      </ul>
     </div>
   );
 }

@@ -35,7 +35,7 @@ function Userdata({ name, age }) {
   return (
     <div>
       <h1>Hello {name} welcome</h1>
-      <p className="blue">Your age is: {age}</p>
+      <p className="blue ">Your age is: {age}</p>
     </div>
   );
 }
